@@ -1234,7 +1234,7 @@ class nagios::server (
     'check_period'                 => '24x7',
     'max_check_attempts'           => '3',
     'check_interval'               => '10',
-    'retry_check_interval'         => '2',
+    'retry_interval'               => '2',
     'contact_groups'               => 'admins',
     'notification_options'         => 'w,u,c,r',
     'notification_interval'        => '60',
@@ -1246,7 +1246,7 @@ class nagios::server (
     'use'                   => 'generic-service',
     'max_check_attempts'    => '4',
     'check_interval'        => '5',
-    'retry_check_interval'  => '1',
+    'retry_interval'        => '1',
     'register'              => '0',
   }
   create_resources (nagios_service, { 'local-service' => $template_local_service }, $template_local_service_defaults)
